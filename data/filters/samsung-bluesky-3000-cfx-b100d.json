@@ -1,0 +1,35 @@
+{
+  "slug": "samsung-bluesky-3000-cfx-b100d",
+  "brand": "삼성",
+  "category": "공기청정기",
+  "name": "삼성 블루스카이 3000 일체형 필터",
+  "partNumber": "CFX-B100D",
+  "officialCode": "DB82-06827A",
+  "priceKRW": 49000,
+  "priceNote": "삼성전자서비스 부품몰 판매가 49,000원 (확인일 기준)",
+  "interval": null,
+  "models": [
+    "AX037FCVAUWD",
+    "AX39R1020GWD",
+    "AX39T1000GWD",
+    "AX39T1000UWD",
+    "AX40H5000UWD",
+    "AX40H5000GMD",
+    "AX40K3020UWD",
+    "AX40K3020GWD",
+    "AX40K3021UWD"
+  ],
+  "modelsComplete": true,
+  "officialCount": null,
+  "source": {
+    "name": "삼성전자서비스 부품몰",
+    "url": "https://www.samsungsvc.co.kr/shop/product/0000153366"
+  },
+  "summary": "삼성 블루스카이 3000 계열(39㎡급) 공기청정기에 쓰는 일체형 필터입니다. 프리·탈취·집진 기능이 하나로 합쳐져 있어 통째로 교체합니다.",
+  "related": [],
+  "notes": [
+    "삼성 판매 코드는 CFX-B100D, 서비스센터 부품 코드는 DB82-06827A입니다. 둘은 같은 제품이며 검색할 때 둘 다 써보세요.",
+    "AX40K3020·AX40K3021 등 같은 39㎡급이라도 연식이 다른 모델이 함께 호환됩니다."
+  ],
+  "verified": "2026-11-19"
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "lg-360-prefilter-mdj65204421",
+  "brand": "LG",
+  "category": "공기청정기",
+  "name": "LG 퓨리케어 360° 극세필터",
+  "partNumber": "MDJ65204421",
+  "officialCode": "MDJ65204421",
+  "priceKRW": 9400,
+  "priceNote": "LG전자 공식몰 정상가 9,400원, 회원할인가 8,900원 (확인일 기준)",
+  "interval": null,
+  "models": [],
+  "modelsComplete": false,
+  "officialCount": 855,
+  "source": {
+    "name": "LG전자 공식몰 케어용품 페이지",
+    "url": "https://www.lge.co.kr/care-accessories/360-air-purifier/mdj65204421"
+  },
+  "summary": "퓨리케어 360° 바깥쪽에 끼우는 극세(프리)필터입니다. 큰 먼지와 머리카락을 먼저 걸러 안쪽 메인 필터 수명을 늘려줍니다.",
+  "related": [
+    "lg-360-v2-pfsajc01",
+    "lg-360-m5-pfsnlc01"
+  ],
+  "notes": [
+    "공식 페이지 기준 사용 가능 모델은 855개로, 메인 필터(V2·M5)를 쓰는 퓨리케어 360° 모델 대부분이 포함됩니다.",
+    "극세필터는 소모품이지만 값이 싸므로 찢어지거나 변형됐을 때 바꾸면 됩니다. 평소에는 청소기로 먼지를 빨아들여 관리합니다."
+  ],
+  "verified": "2026-11-19"
+}

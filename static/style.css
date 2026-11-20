@@ -1,0 +1,18 @@
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#66665f;--line:#e3e2dc;--acc:#0b6e4f;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe6;--mut:#a3a29b;--line:#2e2d2a;--acc:#4cc79b;--card:#1c1c1a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+header,main,footer{max-width:760px;margin:0 auto;padding:16px}
+header{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:20px;color:var(--acc);text-decoration:none}.tag{color:var(--mut);font-size:14px}
+a{color:var(--acc)}h1{font-size:26px;line-height:1.35;margin:20px 0 8px}h2{font-size:19px;margin-top:32px}
+.lead{font-size:17px}.note,.small,.bc,footer{color:var(--mut);font-size:14px}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.facts dt{color:var(--mut)}.facts dd{margin:0;font-weight:600}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;margin:4px 8px 4px 0}
+.models{columns:3 140px;font-family:ui-monospace,Menlo,monospace;font-size:13px;padding-left:18px}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:16px}
+#q{width:100%;font-size:18px;padding:12px 14px;border:2px solid var(--acc);border-radius:10px;background:var(--bg);color:var(--fg)}
+.hit{border-top:1px solid var(--line);padding:8px 0}.miss{color:var(--mut)}
+.cards{list-style:none;padding:0;display:grid;gap:8px}.cards a{display:flex;justify-content:space-between;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--fg)}
+.cards span{color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.disc{font-weight:600}kbd{border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
