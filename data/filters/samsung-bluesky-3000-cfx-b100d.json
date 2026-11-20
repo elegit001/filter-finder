@@ -31,5 +31,11 @@
     "삼성 판매 코드는 CFX-B100D, 서비스센터 부품 코드는 DB82-06827A입니다. 둘은 같은 제품이며 검색할 때 둘 다 써보세요.",
     "AX40K3020·AX40K3021 등 같은 39㎡급이라도 연식이 다른 모델이 함께 호환됩니다."
   ],
-  "verified": "2026-11-19"
+  "verified": "2026-11-19",
+  "coupangLinks": [
+    {
+      "label": "쿠팡에서 CFX-B100D 보기",
+      "url": "https://link.coupang.com/a/iPbPIHm3ie"
+    }
+  ]
 }

@@ -229,5 +229,11 @@
     "AS354N·AS355N·AS356N, AS204N·AS205N·AS206N, AS334N·AS335N·AS336N 계열은 공식 목록상 V2가 아닌 M5 쪽에만 올라 있습니다. 이 모델이라면 M5를 확인하세요.",
     "V2와 M5에 모두 올라 있는 모델은 둘 중 아무거나 장착할 수 있습니다."
   ],
-  "verified": "2026-11-19"
+  "verified": "2026-11-19",
+  "coupangLinks": [
+    {
+      "label": "쿠팡에서 PFSNLC01 보기",
+      "url": "https://link.coupang.com/a/iPbPkS6QdU"
+    }
+  ]
 }
