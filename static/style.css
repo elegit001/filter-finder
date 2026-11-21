@@ -16,3 +16,4 @@ a{color:var(--acc)}h1{font-size:26px;line-height:1.35;margin:20px 0 8px}h2{font-
 .cards{list-style:none;padding:0;display:grid;gap:8px}.cards a{display:flex;justify-content:space-between;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--fg)}
 .cards span{color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px}
 .disc{font-weight:600}kbd{border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.near{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px}.near button{font:13px ui-monospace,Menlo,monospace;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer}.near button:hover{border-color:var(--acc)}
