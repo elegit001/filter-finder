@@ -12,6 +12,8 @@ const readDir = (d) =>
 const filters = readDir("data/filters");
 const guides = readDir("data/guides");
 const bySlug = Object.fromEntries(filters.map((f) => [f.slug, f]));
+const BRAND_SLUG = { LG: "lg", 삼성: "samsung", 샤오미: "xiaomi", 코웨이: "coway", 위닉스: "winix", 쿠쿠: "cuckoo", 필립스: "philips", 다이슨: "dyson" };
+const brandSlug = (b) => BRAND_SLUG[b] || encodeURIComponent(b.toLowerCase());
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const won = (n) => n.toLocaleString("ko-KR") + "원";
@@ -38,6 +40,7 @@ function layout({ title, desc, pathName, body, jsonld }) {
 <meta property="og:title" content="${esc(full)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:type" content="website"><meta property="og:url" content="${esc(url(pathName))}">
 <link rel="stylesheet" href="/style.css">
+${cfg.googleVerification ? `<meta name="google-site-verification" content="${esc(cfg.googleVerification)}">` : ""}${cfg.naverVerification ? `<meta name="naver-site-verification" content="${esc(cfg.naverVerification)}">` : ""}
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ""}
 </head><body>
 <header><a class="logo" href="/">${esc(cfg.siteName)}</a><span class="tag">${esc(cfg.tagline)}</span></header>
@@ -81,8 +84,8 @@ for (const f of filters) {
   const title = `${f.name}${f.partNumber ? ` (${f.partNumber})` : ""} 호환 모델·가격`;
   const desc = `${f.summary} 공식 자료로 확인한 호환 모델 목록${f.priceKRW ? "과 가격" : ""}을 정리했습니다.`;
   write(p, layout({
-    title, desc, pathName: p, jsonld: crumbs([["홈", "/"], [f.brand, "/"], [f.name, p]]),
-    body: `<nav class="bc"><a href="/">홈</a> › ${esc(f.brand)} › ${esc(f.category)}</nav>
+    title, desc, pathName: p, jsonld: crumbs([["홈", "/"], [f.brand, `/brand/${brandSlug(f.brand)}/`], [f.name, p]]),
+    body: `<nav class="bc"><a href="/">홈</a> › <a href="/brand/${brandSlug(f.brand)}/">${esc(f.brand)}</a> › ${esc(f.category)}</nav>
 <h1>${esc(title)}</h1><p class="lead">${esc(f.summary)}</p>
 <dl class="facts">${facts.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
 ${f.priceNote ? `<p class="note">${esc(f.priceNote)}</p>` : ""}
@@ -122,6 +125,20 @@ fs.writeFileSync(path.join(out, "search-index.json"), JSON.stringify({ index, me
 
 // 홈
 const brands = [...new Set(filters.map((f) => f.brand))];
+const card = (f) => `<li><a href="/filter/${f.slug}/"><strong>${esc(f.name)}</strong>${f.partNumber ? `<span>${esc(f.partNumber)}</span>` : ""}</a></li>`;
+for (const b of brands) {
+  const list = filters.filter((f) => f.brand === b);
+  const p = `/brand/${brandSlug(b)}/`;
+  const nModels = new Set(list.flatMap((f) => f.models)).size;
+  write(p, layout({
+    title: `${b} 필터·소모품 호환표`, desc: `${b} 가전에 맞는 필터 ${list.length}종과 호환 모델 ${nModels}개를 제조사 공식 자료 기준으로 정리했습니다.`, pathName: p,
+    jsonld: crumbs([["홈", "/"], [b, p]]),
+    body: `<nav class="bc"><a href="/">홈</a> › ${esc(b)}</nav><h1>${esc(b)} 필터·소모품 호환표</h1>
+<p class="lead">${esc(b)} 필터 ${list.length}종, 호환 모델명 ${nModels}개를 공식 자료 기준으로 모았습니다. 모델명을 알면 <a href="/">첫 화면 검색</a>이 가장 빠릅니다.</p>
+<ul class="cards">${list.map(card).join("")}</ul>`,
+  }));
+}
+const recent = [...filters].sort((a, b) => (b.verified || "").localeCompare(a.verified || "")).slice(0, 5);
 write("/", layout({
   title: cfg.siteName, desc: `${cfg.tagline}. 제조사 공식 자료로 확인한 호환 모델 목록과 가격을 정리합니다.`, pathName: "/",
   body: `<section class="hero"><h1>모델명만 넣으면, 맞는 필터를 알려드려요</h1>
@@ -129,15 +146,17 @@ write("/", layout({
 <input id="q" type="search" placeholder="모델명 입력" autocomplete="off" aria-label="모델명 검색">
 <div id="res" aria-live="polite"></div>
 <p class="small">모델명을 모르겠다면 <a href="/guide/find-model-number/">모델명 찾는 법</a>을 보세요.</p></section>
-${brands.map((b) => `<h2>${esc(b)}</h2><ul class="cards">${filters.filter((f) => f.brand === b).map((f) => `<li><a href="/filter/${f.slug}/"><strong>${esc(f.name)}</strong>${f.partNumber ? `<span>${esc(f.partNumber)}</span>` : ""}</a></li>`).join("")}</ul>`).join("")}
+<h2>최근 추가·확인한 필터</h2><ul class="cards">${recent.map(card).join("")}</ul>
+${brands.map((b) => `<h2><a href="/brand/${brandSlug(b)}/">${esc(b)}</a></h2><ul class="cards">${filters.filter((f) => f.brand === b).map(card).join("")}</ul>`).join("")}
 <h2>가이드</h2><ul class="cards">${guides.map((g) => `<li><a href="/guide/${g.slug}/"><strong>${esc(g.title)}</strong></a></li>`).join("")}</ul>
 <script src="/search.js" defer></script>`,
 }));
 
 // 404, sitemap, robots
 fs.writeFileSync(path.join(out, "404.html"), fix(layout({ title: "페이지를 찾을 수 없어요", desc: "", pathName: "/404.html", body: `<h1>페이지를 찾을 수 없어요</h1><p><a href="/">처음으로 돌아가서</a> 모델명으로 검색해 보세요.</p>` })));
-const pages = ["/", "/about/", ...filters.map((f) => `/filter/${f.slug}/`), ...guides.map((g) => `/guide/${g.slug}/`)];
-fs.writeFileSync(path.join(out, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map((p) => `<url><loc>${url(p)}</loc></url>`).join("")}</urlset>\n`);
+const latest = recent[0]?.verified;
+const pages = [["/", latest], ["/about/"], ...brands.map((b) => [`/brand/${brandSlug(b)}/`, latest]), ...filters.map((f) => [`/filter/${f.slug}/`, f.verified]), ...guides.map((g) => [`/guide/${g.slug}/`, g.verified])];
+fs.writeFileSync(path.join(out, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(([p, d]) => `<url><loc>${url(p)}</loc>${d ? `<lastmod>${d}</lastmod>` : ""}</url>`).join("")}</urlset>\n`);
 fs.writeFileSync(path.join(out, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${url("/sitemap.xml")}\n`);
 if (cfg.baseUrl && !cfg.baseUrl.includes("example.com")) {
   const host = new URL(cfg.baseUrl).host;

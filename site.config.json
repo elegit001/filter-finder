@@ -3,5 +3,7 @@
   "tagline": "내 가전 모델명으로 맞는 필터·소모품 찾기",
   "baseUrl": "https://elegit001.github.io/filter-finder",
   "coupangPartnersEnabled": true,
-  "coupangSearchBase": "https://www.coupang.com/np/search?q="
+  "coupangSearchBase": "https://www.coupang.com/np/search?q=",
+  "googleVerification": "",
+  "naverVerification": ""
 }
