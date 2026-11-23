@@ -1,0 +1,31 @@
+{
+  "slug": "lg-360-oil-mist-pfpada01",
+  "brand": "LG",
+  "category": "공기청정기",
+  "name": "LG 퓨리케어 360° 유증기 특화필터 (4개입)",
+  "partNumber": "PFPADA01",
+  "officialCode": "ADQ75133523",
+  "priceKRW": 27000,
+  "priceNote": "LG전자 공식몰 정상가 27,000원, 회원할인가 25,600원(로그인 후 주문 시 적용) (확인일 기준)",
+  "interval": null,
+  "models": [],
+  "modelsComplete": false,
+  "officialCount": 849,
+  "source": {
+    "name": "LG전자 공식몰 케어용품 페이지",
+    "url": "https://www.lge.co.kr/care-accessories/360-air-purifier/adq75133523"
+  },
+  "summary": "LG 퓨리케어 360° 공기청정기용 유증기 특화필터입니다. 요리할 때 생기는 기름 섞인 연기(유증기)가 고민인 집을 위한 특화필터로, 4개가 한 세트입니다.",
+  "related": [
+    "lg-360-prefilter-mdj65204421",
+    "lg-360-v2-pfsajc01",
+    "lg-360-m5-pfsnlc01"
+  ],
+  "notes": [
+    "LG 판매 코드는 PFPADA01, 공식몰 모델명은 ADQ75133523입니다. 둘은 같은 제품이니 검색할 때 둘 다 써보세요.",
+    "공식 페이지 기준 사용 가능 모델은 849개입니다. 전체 목록은 출처 링크의 공식 페이지 '사용 가능한 모델'에서 내 제품 모델명과 글자 하나까지 같은지 확인하세요.",
+    "공식 페이지에는 권장 교체 주기가 적혀 있지 않습니다.",
+    "같은 360° 특화필터로 새집증후군 특화필터(PFPABA01), 매연 특화필터(PFPACA01)도 공식몰에서 판매합니다."
+  ],
+  "verified": "2026-11-24"
+}
