@@ -51,10 +51,18 @@
     "url": "https://www.samsungsvc.co.kr/shop/product/0000010256"
   },
   "summary": "삼성 블루스카이 5000 계열 공기청정기에 쓰는 일체형 필터입니다. 필터 하나를 통째로 교체하는 방식입니다.",
-  "related": ["samsung-bluesky-3000-cfx-b100d"],
+  "related": [
+    "samsung-bluesky-3000-cfx-b100d"
+  ],
   "notes": [
     "부품몰 상품명은 '블루스카이 5000 일체형필터'(SVC-201-5004)이고 판매 코드는 CFX-D100D입니다. 필터 크기는 285 x 424 x 58 mm로 적혀 있습니다.",
     "부품몰은 같은 시리즈라도 모델별로 필터가 다를 수 있으니 구매 전 내 모델명을 확인하라고 안내합니다. 목록에 없으면 삼성전자서비스 고객센터(1588-3366)에 문의하세요."
   ],
-  "verified": "2026-11-20"
+  "verified": "2026-11-20",
+  "coupangLinks": [
+    {
+      "label": "쿠팡에서 CFX-D100D 보기",
+      "url": "https://link.coupang.com/a/iUfiP9nBWS"
+    }
+  ]
 }
