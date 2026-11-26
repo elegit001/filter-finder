@@ -1,0 +1,32 @@
+{
+  "slug": "xiaomi-smart-air-purifier-4-compact-filter",
+  "brand": "샤오미",
+  "category": "공기청정기",
+  "name": "샤오미 스마트 공기청정기 4 컴팩트 필터",
+  "partNumber": "AFEP7TFM01",
+  "officialCode": null,
+  "priceKRW": null,
+  "priceNote": null,
+  "interval": "6~12개월",
+  "models": [
+    "샤오미 스마트 공기청정기 4 컴팩트"
+  ],
+  "modelsComplete": true,
+  "officialCount": null,
+  "source": {
+    "name": "샤오미 코리아 공식 제품 페이지",
+    "url": "https://www.mi.com/kr/product/xiaomi-smart-air-purifier-4-compact-filter/"
+  },
+  "summary": "샤오미 스마트 공기청정기 4 컴팩트 전용 3중 필터(기본 필터 + 고효율 필터 + 활성탄)입니다. 샤오미는 6~12개월마다 교체를 권장합니다.",
+  "related": [
+    "xiaomi-smart-air-purifier-4-lite-filter",
+    "xiaomi-smart-air-purifier-4-pro-filter"
+  ],
+  "notes": [
+    "공식 페이지는 '4 컴팩트 전용'이라고 적고 있고, 사양 페이지의 호환 기기도 4 Compact 하나뿐입니다. 이름이 비슷한 4 라이트·4 Pro 필터와 헷갈리지 마세요.",
+    "공식 사양 페이지 기준 제품 모델 번호는 AFEP7TFM01, 크기는 Φ175×H171mm, 무게는 약 0.4kg입니다. 구성품은 필터 1개와 사용 설명서 1개입니다.",
+    "공식 페이지는 고효율 필터가 0.3μm 입자를 99.97% 거른다고 적고 있습니다(제조사가 인용한 시험 보고서 기준).",
+    "공식 구매 페이지에 가격이 표시되지 않아 가격은 적지 않았습니다."
+  ],
+  "verified": "2026-11-26"
+}

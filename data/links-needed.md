@@ -4,3 +4,4 @@
 lg-360-oil-mist-pfpada01 | https://www.coupang.com/np/search?q=PFPADA01
 lg-360-new-house-pfpaba01 | https://www.coupang.com/np/search?q=PFPABA01
 lg-360-smoke-pfpaca01 | https://www.coupang.com/np/search?q=PFPACA01
+xiaomi-smart-air-purifier-4-compact-filter | https://www.coupang.com/np/search?q=AFEP7TFM01
