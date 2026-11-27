@@ -1,0 +1,27 @@
+{
+  "slug": "samsung-clean-station-exhaust-filter-vca-ahf90",
+  "brand": "삼성",
+  "category": "청소기",
+  "name": "삼성 청정스테이션 배기필터",
+  "partNumber": "VCA-AHF90/VT",
+  "officialCode": "VCA-AHF90/VT",
+  "priceKRW": null,
+  "priceNote": null,
+  "interval": null,
+  "models": [],
+  "modelsComplete": false,
+  "officialCount": null,
+  "source": {
+    "name": "삼성닷컴 리빙가전 소모품 페이지",
+    "url": "https://www.samsung.com/sec/living-accessories/accessory-vca-ahf90vt-d2c/VCA-AHF90/VT/"
+  },
+  "summary": "삼성 청정스테이션(먼지 자동 비움 스테이션)에 들어가는 배기필터입니다. 냄새를 줄이는 활성탄 필터가 함께 들어 있습니다.",
+  "related": [],
+  "notes": [
+    "삼성닷컴 공식 페이지는 호환 모델을 개별 모델명이 아니라 앞자리로 안내합니다: 'VS15A'로 시작하는 Bespoke 슬림 제품, 'VCA-SAE90' 또는 'VCA-SAE85'로 시작하는 청정스테이션 제품과 호환됩니다. 내 제품 모델명의 앞자리가 이와 같은지 확인하세요.",
+    "공식 페이지 기준 외관 크기는 145×39×117mm입니다.",
+    "공식 페이지는 청정스테이션의 5중 청정 헤파시스템 안에서 이 배기필터가 미세먼지 배출을 99.999% 막는다고 적고 있습니다(제조사 표기).",
+    "확인일 기준 삼성닷컴에서는 상품 정보만 볼 수 있고 구매는 되지 않아(재입고 알림만 가능) 가격은 적지 않았습니다. 공식 페이지에는 권장 교체 주기와 포장 수량도 적혀 있지 않습니다."
+  ],
+  "verified": "2026-11-28"
+}
