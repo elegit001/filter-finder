@@ -80,6 +80,13 @@ for (const f of filters) {
     ? `<p>${f.officialCount ? `공식 페이지에는 색상·지역 표기를 포함해 ${f.officialCount}개 모델이 올라 있습니다. 아래는 점(.) 뒤 접미사를 뺀 ${f.models.length}개 모델명입니다.` : `공식 자료에 적힌 호환 모델 ${f.models.length}개입니다.`} <kbd>Ctrl+F</kbd>로 내 모델명을 찾아보세요.</p>
 <ul class="models">${f.models.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>`
     : `<p>공식 페이지에 ${f.officialCount ? f.officialCount + "개 " : ""}모델이 올라 있지만 아직 전체 목록을 옮기지 못했습니다. <a href="${esc(f.source.url)}" rel="noopener" target="_blank">공식 페이지</a>에서 내 모델명을 확인하세요.</p>`;
+  // 교체 주기·교체 방법: 공식 자료에 적힌 것만 (data의 interval, care 필드)
+  const c = f.care || {};
+  const careHtml = `<h2>교체 주기·교체 방법</h2>
+<p>${f.interval ? `제조사 권장 교체 주기는 <strong>${esc(f.interval)}</strong>입니다.` : "공식 자료에 권장 교체 주기가 적혀 있지 않습니다."}</p>
+${c.when?.length ? `<h3>교체 시기 확인</h3><ul>${c.when.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+${c.steps?.length ? `<h3>교체 방법</h3><ol>${c.steps.map((t) => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p class="note">공식 자료에 단계별 교체 방법이 없어 적지 않았습니다. 제품 사용 설명서를 참고하세요.</p>`}
+${c.source ? `<p class="note">출처: <a href="${esc(c.source.url)}" rel="noopener" target="_blank">${esc(c.source.name)}</a> (${esc(c.verified || f.verified)} 확인)</p>` : ""}`;
   const rel = (f.related || []).filter((s) => bySlug[s]).map((s) => `<li><a href="/filter/${s}/">${esc(bySlug[s].name)}</a></li>`).join("");
   const title = `${f.name}${f.partNumber ? ` (${f.partNumber})` : ""} 호환 모델·가격`;
   const desc = `${f.summary} 공식 자료로 확인한 호환 모델 목록${f.priceKRW ? "과 가격" : ""}을 정리했습니다.`;
@@ -92,6 +99,7 @@ ${f.priceNote ? `<p class="note">${esc(f.priceNote)}</p>` : ""}
 <div class="buy">${buyLinks(f)}</div>
 <h2>알아두면 좋은 점</h2><ul>${f.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>
 <h2>호환 모델</h2>${modelsHtml}
+${careHtml}
 <h2>출처</h2><p><a href="${esc(f.source.url)}" rel="noopener" target="_blank">${esc(f.source.name)}</a> (${esc(f.verified)} 확인)</p>
 ${rel ? `<h2>함께 보는 필터</h2><ul>${rel}</ul>` : ""}`,
   }));

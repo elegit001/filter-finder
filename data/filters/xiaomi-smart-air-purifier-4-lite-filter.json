@@ -31,5 +31,16 @@
       "label": "쿠팡에서 4 라이트 필터 보기",
       "url": "https://link.coupang.com/a/iPbRdXPRBI"
     }
-  ]
+  ],
+  "care": {
+    "when": [
+      "공식 페이지 기준 Mi Home/Xiaomi Home 앱에서 필터 사용 현황을 실시간으로 보고, 사용 패턴에 맞춘 교체 시기를 추천받을 수 있습니다.",
+      "공식 페이지는 사용 환경에 따라 6~12개월마다 교체하라고 안내합니다."
+    ],
+    "source": {
+      "name": "샤오미 코리아 공식 페이지",
+      "url": "https://www.mi.com/kr/product/xiaomi-smart-air-purifier-4-lite-filter/"
+    },
+    "verified": "2026-11-29"
+  }
 }
